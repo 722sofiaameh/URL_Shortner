@@ -1,39 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body>
-    <nav>
-      
+  
+  <body class="">
+    <nav class="p-5 bg-white md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[Poppins] cursor-pointer">
+          <img class="h-10 inline" src="./images/logo.svg" />
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon
+            name="menu"
+            onclick="Menu(this)"
+            class="text-Gray"
+          ></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+            >SERVICE</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+            >CONTACT</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+            >BLOG'S</a
+          >
+        </li>
+
+        <button
+          class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded"
+        >
+          Get started
+        </button>
+        <h2 class=""></h2>
+      </ul>
     </nav>
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+    <section class="mx-auto container">
+      <img src="./images/illustration-working.svg" class="" />
+      <div>
+        <h2
+          class="text-3xl text-center py-6 p-3 text-verydarkBlue font-semibold"
+        >
+          More Than just Shorter Links
+        </h2>
+        <p class="p-3 text-center text-bdFont text-Gray">
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </p>
+
+        <div class="flex justify-center items-center">
+          <a
+            class="bg-cyan-300 p-4 rounded-full text-white text-center text-xl font-medium"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="bg-[url('./images/bg-shorten-mobile.svg')] bg-center bg-no-repeat"
+    >
+      <div class="flex items-center justify-center flex-col">
+        <input
+          class="placeholder-shown:border-gray-500 border rounded-lg text-center mt-8 mb-8 py-3 px-16"
+          placeholder="you@example.com"
+        />
+        <button
+          class="bg-cyan-300 text-white px-28 py-3 font-medium text-xl rounded-lg"
+        >
+          Shorten It
+        </button>
+      </div>
+    </section>
+    <section class="bg-Gray">
+      <h2
+        class="text-center  text-3xl font-medium text-verydarkBlue pt-8"
+      >
+        Advanced Statistics
+      </h2>
+    </section>
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
   </body>
 </html>
