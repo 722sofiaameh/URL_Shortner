@@ -10,7 +10,8 @@ module.exports = {
         Gray: "hsl(0, 0%, 75%)",
         grayishViolet: "hsl(257, 7%, 63%)",
         verydarkBlue: "hsl(255, 11%, 22%)",
-        verydarkViolet: "hsl(260, 8%, 14%)"
+        verydarkViolet: "hsl(260, 8%, 14%)",
+       
       },
       fontFamily:{
         Poppins: ['Poppins',]
